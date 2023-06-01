@@ -1,0 +1,59 @@
+    {% extends "base.html" %}
+    {% block title %}{{ article.title }} - {{SITENAME}}{% endblock title %}
+    {% block content %}
+
+    <section id="content" class="article content">
+      <header>
+        <h2 class="entry-title">
+          {{ article.title }}
+        </h2>
+        {% import 'translations.html' as translations with context %}
+        {{ translations.translations_for(article) }}
+        <div class="text-orange">{{ article.locale_date }}</div>
+      </header>
+
+      <p>Written by: {% for author in article.authors %}{{ author }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+
+<!-- .entry-content -->
+      <div class="entry-content">
+        {{ article.content }}
+      </div>
+<!-- /.entry-content -->
+
+    <div>
+      {% if article.series %}
+        <hr>
+        <p>This <code>article</code> is part {{ article.series.index }} of the "{{ article.series.name }}" series:</p>
+        <ol class="parts">
+          {% for part_article in article.series.all %}
+          <li {% if part_article == article %} class="active" {% endif %}>
+            {% if part_article == article %}
+              {{ part_article.title }}
+            {% else %}
+              <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+        <hr>
+      {% endif %}
+    </div>
+
+    <footer class="text-orange">
+      <span class="text-orange">Category:</span> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+
+      {% if article.tags %}
+      <div>
+        Tags:
+        {% for tag in article.tags %}
+        <button type="button" class="btn btn-default">
+          <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+        </button>
+        {% endfor %}
+      {% endif %}
+    </div>
+    </footer>
+    <!-- /.post-info -->
+    {% include 'disqus.html' %}
+    </section>
+    {% endblock %}

@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
+{% block navclass %}{%endblock%}
+{% block archclass %} active {%endblock%}
+
+{% block content_title %}
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ SITEURL }}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{{SITEURL}}/tags.html">Tags</a></li>
+    <li class="breadcrumb-item active">{{ tag }} <span class="badge bg-secondary">{{ articles|count }}</span></li>
+  </ol>
+{% endblock %}

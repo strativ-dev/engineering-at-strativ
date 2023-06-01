@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} - Tags{% endblock %}
+{% block archclass %} class="active"{%endblock%}
+{% block content %}
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ SITEURL }}">Home</a></li>
+        <li class="breadcrumb-item active">Tags <span class="badge bg-secondary">{{ tags|count }}</span></li>
+      </ol>
+
+      <ul class="list-inline">
+        {% for tag, articles in tags|sort %}
+        <li>
+          <button type="button" class="btn btn-outline-blue m-1">
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+            <span class="badge bg-secondary">{{ articles|count }}</span>
+          </button>
+        </li>
+        {% endfor %}
+      </ul>
+{% endblock %}

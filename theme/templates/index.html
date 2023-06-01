@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block navclass %} active {% endblock %}
+
+{% block content %}
+    <section id="content" class="content">
+      {% block content_title %}{% endblock %}
+      {% for article in articles_page.object_list %}
+        <div class="row">
+          <div class="col-sm-3">
+            <span class="text-orange">{{article.locale_date}}</span>
+          </div>
+          <div class="col-sm-9">
+            <p>
+              <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title|striptags }}</a>
+              <br/>
+              {{ article.summary|striptags }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+      {% include 'pagination.html' %}
+    </section>
+{% endblock content %}
+
+{% block series %}
+  <h2 class="mt-5">Series</h2>
+  <hr>
+  {% for series_name, series_articles in series.items() %}
+  {% set first_article_of_series = series_articles[0] %}
+    <div class="mt-3">
+      <div class="card-body">
+        <a class="h5" href="{{ first_article_of_series.url }}">{{ series_name }}</a>
+        <ol>
+        {% for article in series_articles %}
+          <li><a href="{{ article.url }}" class="cart-text">{{ article.title }}</a></li>
+        {% endfor %}
+        </ol>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock series %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} - Categories{% endblock %}
+{% block archclass %} class="active"{%endblock%}
+{% block content %}
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{{SITEURL}}">Home</span></a>
+        </li>
+        <li class="breadcrumb-item active">
+          Categories <span class="badge bg-secondary">{{ categories|count }}</span>
+        </li>
+      </ol>
+
+      <ul class="list-inline">
+        {% for category, articles in categories|sort %}
+        <li>
+          <button type="button" class="m-1 btn btn-outline-blue">
+            <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+            <span class="badge bg-secondary"> {{ articles|count }}</span>
+          </button>
+        </li>
+        {% endfor %}
+      </ul>
+{% endblock %}
