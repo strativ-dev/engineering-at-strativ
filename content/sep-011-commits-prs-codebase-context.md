@@ -10,7 +10,7 @@ Summary: SEP-011 sets the standard for commit messages, branch names, PR titles,
 |---|---|
 | **SEP** | 011 |
 | **Title** | Improving Commits, PR Descriptions & Codebase Context in Git |
-| **Author** | Saqibur Rahman &lt;saqibur.rahman@strativ.se&gt; |
+| **Author** | Saqibur Rahman |
 | **Status** | Draft |
 | **Type** | Process |
 | **Created** | 2026-04-30 |
