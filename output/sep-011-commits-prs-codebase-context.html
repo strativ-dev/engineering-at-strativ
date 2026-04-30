@@ -1,0 +1,507 @@
+<!DOCTYPE html> <!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <title>SEP-011: Improving Commits, PR Descriptions & Codebase Context in Git - Engineering @ Strativ AB</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="https://strativ-dev.github.io/engineering-at-strativ/theme/style.css" rel="stylesheet" />
+
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+          </head>
+
+  <body id="index">
+    <nav
+      class="navbar navbar-expand-lg mb-4 custom-dark-background"
+      role="navigation"
+    >
+      <div class="container">
+        <a class="navbar-brand text-ivory" href="https://strativ-dev.github.io/engineering-at-strativ" style="color: #F7F7E8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 60 36"
+          >
+            <path
+              d="M25.997 35.982h-2.913c-1.012 0-1.232-.182-1.451-1.191l-1.799-8.346c-1.353-6.266-2.71-12.531-4.068-18.797-.089-.422-.178-.882-.747-.844-.507.02-.6.422-.688.844a53609.076 53609.076 0 0 1-5.952 27.43 1.018 1.018 0 0 1-1.152.912c-2.026-.03-4.052 0-6.082 0-1.114 0-1.304-.245-1.038-1.334.819-3.402 1.64-6.804 2.465-10.205C4.1 18.098 5.625 11.743 7.147 5.384 7.94 2.098 9.899.438 13.25.104a15.07 15.07 0 0 1 5.095.267c2.532.62 3.997 2.331 4.592 4.802 2.38 9.839 4.748 19.68 7.103 29.52.24 1.002 0 1.293-1.063 1.297l-2.98-.008ZM42.441 35.969c-.464-.11-.932-.216-1.397-.338-2.532-.684-3.946-2.433-4.545-4.933-2.277-9.49-4.556-18.982-6.838-28.478-.089-.367-.186-.735-.262-1.106-.152-.748.093-1.086.845-1.103 1.012-.025 2.03 0 3.043 0h3.102c.958 0 1.22.211 1.426 1.162l2.305 10.699c1.19 5.505 2.383 11.007 3.58 16.507.06.287.207.55.421.751.389.338.844.051.996-.625.393-1.727.764-3.459 1.136-5.19 1.61-7.42 3.217-14.842 4.824-22.265.186-.844.422-1.043 1.3-1.043h5.91c1.168 0 1.37.245 1.105 1.356-1.275 5.308-2.554 10.617-3.837 15.928-1.072 4.469-2.147 8.938-3.224 13.407-.743 3.074-2.461 4.646-5.589 5.148-.12.03-.238.072-.35.127l-3.95-.004Z"
+              fill="#FF5A00"
+            ></path>
+          </svg>
+          <span class="ms-2">Engineering @ Strativ AB</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbar-collapse"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li>
+              <a
+                class="text-white me-2 ms-2"
+                href="https://strativ-dev.github.io/engineering-at-strativ/categories.html"
+                >categories</a
+              >
+            </li>
+             <li>
+              <a class="text-white me-2 ms-2" href="https://strativ-dev.github.io/engineering-at-strativ/tags.html"
+                >tags</a
+              >
+            </li>
+            <li>
+              <a class="text-white me-2 ms-2" href="https://strativ-dev.github.io/engineering-at-strativ/archives.html"
+                >archives</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+    <section id="content" class="article content">
+      <header>
+        <h2 class="entry-title">
+          SEP-011: Improving Commits, PR Descriptions & Codebase Context in Git
+        </h2>
+        
+        <div class="text-orange">Thu 30 April 2026</div>
+      </header>
+
+      <p>Written by: Saqibur Rahman</p>
+
+<!-- .entry-content -->
+      <div class="entry-content">
+        <table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SEP</strong></td>
+<td>011</td>
+</tr>
+<tr>
+<td><strong>Title</strong></td>
+<td>Improving Commits, PR Descriptions &amp; Codebase Context in Git</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td>Saqibur Rahman &lt;saqibur.rahman@strativ.se&gt;</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td>Process</td>
+</tr>
+<tr>
+<td><strong>Created</strong></td>
+<td>2026-04-30</td>
+</tr>
+<tr>
+<td><strong>Target Adoption</strong></td>
+<td>2026-Q3</td>
+</tr>
+<tr>
+<td><strong>Requires</strong></td>
+<td>SEP-001</td>
+</tr>
+<tr>
+<td><strong>Related</strong></td>
+<td>SEP-004, SEP-005, SEP-010</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Abstract</h2>
+<p>This SEP establishes a binding standard for what Strativ developers write in Git — commit messages, branch names, pull request titles, and pull request descriptions. It adopts the Conventional Commits specification as the required commit format, defines the structure of useful PR descriptions, and explains why the quality of these artefacts is no longer just an engineering hygiene concern but a direct input to the systems — both human and AI — that depend on Strativ's accumulated codebase context.</p>
+<p>It does not require AI assistance to be used. It does explicitly permit and encourage it for developers who find writing commit messages tedious, while making clear that the Pilot remains accountable for what gets written either way.</p>
+<hr>
+<h2>1. Motivation</h2>
+<p>Every commit message and PR description Strativ produces becomes part of the historical record. That record is read by:</p>
+<ul>
+<li>The developer who wrote it, six months later, when something breaks.</li>
+<li>A new joiner trying to understand why a piece of code looks the way it does.</li>
+<li>A reviewer trying to compress "what changed and why" into thirty seconds of attention.</li>
+<li>A client asking what was delivered in the last sprint.</li>
+<li><strong>Strativ Brain</strong> — our internal context engine — which indexes commit history, PR descriptions, and code together to answer questions across projects.</li>
+<li>Every AI Copilot that subsequently works in the repository, all of which have only what was written down to go on.</li>
+</ul>
+<p>The current state is uneven. We have repositories with thoughtful, structured histories that read like documentation. We also have repositories where half the commits say "fix" or "wip" or "updates," and PR descriptions that contain only the auto-generated branch name. This SEP exists because that gap is now expensive in ways it was not before.</p>
+<h3>1.1 The cost of a meaningless commit</h3>
+<p>Consider two commits, both touching the same authentication module:</p>
+<table>
+<thead>
+<tr>
+<th>✓ GOOD</th>
+<th>✗ BAD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>feat(auth): add JWT refresh token rotation</code></td>
+<td><code>fix</code></td>
+</tr>
+<tr>
+<td>Replaces single long-lived JWT with rotating refresh tokens. Refresh tokens are single-use; reuse triggers session revocation across all devices. Closes BMS-247.</td>
+<td><em>(no body)</em></td>
+</tr>
+</tbody>
+</table>
+<p>Both commits change the same number of lines. Both pass tests. Both ship. But only the first one survives contact with anyone who reads the repository later. The second is dead weight — present in history, useless for understanding it. A Copilot asked to summarise recent auth work in this repository can produce a coherent answer from the first commit and nothing useful from the second.</p>
+<h3>1.2 The brain only knows what we write down</h3>
+<p>Strativ Brain (and every other context system, internal or AI) is not a magic source of truth — it is a search and retrieval layer over what we, the developers, have already written. Its output quality is bounded by the quality of its input. "Garbage in, garbage out" is unusually literal here: a brain trained on a repository where 40% of commits say "fix" will cheerfully tell you that 40% of recent work involved fixing something, with no further detail available.</p>
+<p>This is not a problem we can solve later by improving the brain. It is a problem solved earlier, in the repository, by writing better commits and PR descriptions in the first place.</p>
+<hr>
+<h2>2. Specification</h2>
+<h3>2.1 Commit message standard</h3>
+<p>Strativ adopts the <strong>Conventional Commits specification, version 1.0.0</strong>, as the required format for all commit messages in repositories under active development.</p>
+<p>The structure is:</p>
+<div class="codehilite"><pre><span></span><code>&lt;type&gt;(&lt;scope&gt;): &lt;short description&gt;
+
+&lt;optional body&gt;
+
+&lt;optional footer(s)&gt;
+</code></pre></div>
+
+<h4>2.1.1 Required types</h4>
+<p>Every commit must begin with one of the following types. The list is closed — "misc," "update," and similar are not types.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>feat</code></td>
+<td>A new feature visible to a user, an API consumer, or another developer.</td>
+</tr>
+<tr>
+<td><code>fix</code></td>
+<td>A bug fix. Reference the bug or ticket in the body or footer.</td>
+</tr>
+<tr>
+<td><code>refactor</code></td>
+<td>Changes that neither add features nor fix bugs. Internal restructuring.</td>
+</tr>
+<tr>
+<td><code>perf</code></td>
+<td>Changes that improve performance. State the measured improvement in the body.</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>Adding or updating tests. No production code changes.</td>
+</tr>
+<tr>
+<td><code>docs</code></td>
+<td>Documentation only — README, ADRs, code comments, runbooks.</td>
+</tr>
+<tr>
+<td><code>build</code></td>
+<td>Changes to build system, dependencies, packaging.</td>
+</tr>
+<tr>
+<td><code>ci</code></td>
+<td>Changes to CI/CD pipelines, GitHub Actions, deployment scripts.</td>
+</tr>
+<tr>
+<td><code>chore</code></td>
+<td>Maintenance tasks that don't fit the above. Use sparingly.</td>
+</tr>
+</tbody>
+</table>
+<h4>2.1.2 Scope</h4>
+<p>Scope is optional but strongly preferred. It names the area of the codebase being changed — typically a module, package, app, or domain. Each repository should document its scope vocabulary in its <code>CONTRIBUTING.md</code> or <code>CLAUDE.md</code>.</p>
+<p>Common Strativ scope examples:</p>
+<ul>
+<li><code>auth</code>, <code>billing</code>, <code>consumption</code>, <code>agreement</code>, <code>placement</code> (domain modules)</li>
+<li><code>api</code>, <code>web</code>, <code>worker</code>, <code>deploy</code> (technical layers)</li>
+<li><code>BMS</code>, <code>IMS</code>, <code>LumberScan</code> (project codes for cross-cutting work)</li>
+</ul>
+<h4>2.1.3 Description</h4>
+<p>The description follows the colon. It must:</p>
+<ul>
+<li>Be written in the <strong>imperative mood</strong> — "add", not "added" or "adds". Read it as completing the sentence "If applied, this commit will…"</li>
+<li>Start with a lowercase letter.</li>
+<li>Not end with a period.</li>
+<li>Stay under 72 characters total (type + scope + colon + description).</li>
+<li>Describe <strong>what the change does</strong>, not what files were touched.</li>
+</ul>
+<h4>2.1.4 Body</h4>
+<p>The body is where the <strong>why</strong> lives. It is optional for trivial commits but required for any change that is not self-evident from the diff. The body explains:</p>
+<ul>
+<li>Why the change is being made (what problem it solves).</li>
+<li>What approach was chosen and what alternatives were considered, when relevant.</li>
+<li>Side effects, migration steps, or follow-up work the reader should be aware of.</li>
+</ul>
+<p>Wrap body lines at 72 characters. Separate paragraphs with a blank line.</p>
+<h4>2.1.5 Breaking changes</h4>
+<p>A breaking change is indicated by either:</p>
+<ul>
+<li>An exclamation mark after the type/scope: <code>feat(auth)!: replace token format</code>.</li>
+<li>A footer line beginning with <code>BREAKING CHANGE:</code> explaining what breaks and how to migrate.</li>
+</ul>
+<p>Both are acceptable. The footer form is preferred when the migration story is non-trivial.</p>
+<h4>2.1.6 Footers</h4>
+<p>Footers carry structured metadata that downstream tools can parse:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Closes</span><span class="w"> </span><span class="n">BMS</span><span class="o">-</span><span class="mi">247</span><span class="w"></span>
+<span class="n">Refs</span><span class="w"> </span><span class="n">IMS</span><span class="o">-</span><span class="mi">031</span><span class="p">,</span><span class="w"> </span><span class="n">IMS</span><span class="o">-</span><span class="mi">032</span><span class="w"></span>
+<span class="n">Reviewed</span><span class="o">-</span><span class="k">by</span><span class="err">:</span><span class="w"> </span><span class="n">Ludwig</span><span class="w"></span>
+<span class="n">Co</span><span class="o">-</span><span class="n">authored</span><span class="o">-</span><span class="k">by</span><span class="err">:</span><span class="w"> </span><span class="n">Tajmirul</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tajmirul</span><span class="nv">@strativ</span><span class="p">.</span><span class="n">se</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">BREAKING</span><span class="w"> </span><span class="nl">CHANGE</span><span class="p">:</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="n">storage</span><span class="w"> </span><span class="n">moved</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">cookie</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">header</span><span class="w"></span>
+</code></pre></div>
+
+<h3>2.2 Branch naming</h3>
+<p>Branch names are short-lived but inform PR titles, deployments, and history searches. They should follow:</p>
+<div class="codehilite"><pre><span></span><code>&lt;type&gt;/&lt;scope&gt;-&lt;short-slug&gt;
+
+feat/auth-jwt-refresh-rotation
+fix/consumption-monthly-range-off-by-one
+refactor/placement-selector
+chore/upgrade-django-5
+</code></pre></div>
+
+<p>Avoid: branch names that are only a ticket number (<code>BMS-247</code>), only a person's name (<code>saqib-stuff</code>), or fully unstructured (<code>new-auth-flow-v2-final</code>).</p>
+<h3>2.3 Pull request titles</h3>
+<p>PR titles follow the same Conventional Commits format as commit messages. When a PR contains a single commit, the PR title and the commit subject should be identical. When the PR will be squash-merged, the PR title becomes the commit subject and must satisfy §2.1.</p>
+<p>Avoid PR titles that:</p>
+<ul>
+<li>Restate the branch name as a sentence ("Add JWT refresh token rotation work").</li>
+<li>Reference only the ticket ("BMS-247").</li>
+<li>Use "Update X" or "Fix X" without specifying what.</li>
+</ul>
+<h3>2.4 Pull request descriptions</h3>
+<p>PR descriptions are the place where context that doesn't belong in commit messages goes — screenshots, deployment notes, testing instructions, reviewer guidance. Every PR uses the following template:</p>
+<div class="codehilite"><pre><span></span><code><span class="gu">## What</span>
+One paragraph: what this PR changes. Written for a reviewer
+who hasn&#39;t seen the ticket.
+
+<span class="gu">## Why</span>
+One paragraph: the problem this solves or the goal it advances.
+Link to the ticket, ADR, or upstream discussion.
+
+<span class="gu">## How</span>
+Bullet list of the technical approach. Note any non-obvious
+choices, deviations from convention, or trade-offs accepted.
+
+<span class="gu">## Verification</span>
+How to confirm this works. Test commands, manual steps,
+URLs to staging, screenshots, before/after metrics.
+
+<span class="gu">## Risks &amp; Follow-up</span>
+Anything the reviewer or future maintainer should know.
+Known limitations, deferred work, monitoring to watch.
+
+---
+Pilot: &lt;name&gt;
+AI involvement: none / drafting / extensive
+</code></pre></div>
+
+<p>Trivial PRs (one-line typo fixes, dependency bumps) may collapse the template to a single sentence under <strong>What</strong>. The five-section structure is the default; deviations are deliberate.</p>
+<h3>2.5 Forbidden patterns</h3>
+<p>The following are not acceptable in any repository under active development. PRs containing them should be revised before merge.</p>
+<table>
+<thead>
+<tr>
+<th>✓ GOOD</th>
+<th>✗ BAD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fix(consumption): correct off-by-one in monthly range split</code></td>
+<td><code>fix</code></td>
+</tr>
+<tr>
+<td><code>feat(auth): add Microsoft Entra OIDC login flow</code></td>
+<td><code>wip</code></td>
+</tr>
+<tr>
+<td><code>refactor(placement): switch site selector to placement-based</code></td>
+<td><code>updates</code></td>
+</tr>
+<tr>
+<td><code>docs(adr): record decision on Knox vs JWT for session tokens</code></td>
+<td><code>asdf</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>merge branch 'feature/...'</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>fix bug</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>review changes</code></td>
+</tr>
+</tbody>
+</table>
+<h3>2.6 The role of AI</h3>
+<p>Per SEP-001, Pilots may use Copilots for any drafting task where the Pilot remains accountable for output. Commit messages and PR descriptions are explicitly included.</p>
+<p>A well-framed Copilot can read a diff and produce a competent first-draft commit message in seconds. Pilots who find writing commits tedious are encouraged to delegate the first draft and edit. Pilots who prefer to write their own remain free to do so. Either choice is acceptable; no choice is.</p>
+<blockquote>
+<p><strong>PILOT ACCOUNTABILITY</strong></p>
+<p>If the Copilot's draft is wrong, misleading, or generic, the Pilot edits or rewrites it before committing. Shipping an unread Copilot-generated commit message is the same accountability failure as shipping an unread Copilot-generated function. The Pilot's name is on the commit either way.</p>
+</blockquote>
+<p><strong>What a Copilot is genuinely good at:</strong></p>
+<ul>
+<li>Producing the first-draft body when the developer has the diff in hand but doesn't want to write English at the end of a long day.</li>
+<li>Suggesting the correct Conventional Commits type from the actual change content.</li>
+<li>Drafting PR descriptions from a series of commits, scaffolding the What/Why/How/Verification sections.</li>
+<li>Catching commits about to ship as "fix" and asking the Pilot for a real description.</li>
+</ul>
+<p><strong>What a Copilot is unreliable at, and where the Pilot must add value:</strong></p>
+<ul>
+<li>Knowing <em>why</em> a change was made when that reason isn't in the diff.</li>
+<li>Choosing the right scope when scope vocabulary is project-specific.</li>
+<li>Identifying breaking changes correctly when the breaking aspect is semantic, not structural.</li>
+<li>Writing the Risks &amp; Follow-up section honestly — that requires Pilot judgement about the surrounding system.</li>
+</ul>
+<hr>
+<h2>3. Rationale</h2>
+<p>Three reasons drive this SEP, in increasing order of weight.</p>
+<p><strong>First, reviewer experience.</strong> A reviewer who can read a PR's What/Why/How block in thirty seconds and form an opinion is a reviewer who reviews promptly and reviews well. A reviewer who has to reverse-engineer the intent from the diff is slower, more error-prone, and — over time — more reluctant. The cost of a thirty-second write is recouped many times over in faster, sharper reviews.</p>
+<p><strong>Second, future-self experience.</strong> Every developer eventually opens <code>git blame</code> on a line they wrote two years ago and wonders why. A commit that says "fix" is a small betrayal of the future self who will need to know. A commit that says <code>fix(consumption): correct off-by-one in monthly range split — caused first day of February to be excluded from billing</code> is a gift to that same person.</p>
+<p><strong>Third — and this is the new weight in 2026 — context-engine readability.</strong> Strativ Brain, AI Copilots, and any future tools that reason over our codebase are all consumers of what we write. They cannot improve quality on a corpus of "fix" commits. This is not a hypothetical concern; it is already shaping how useful (or not) our internal AI tooling is per repository. The repositories with disciplined commit hygiene are the repositories where Brain is genuinely useful. The correlation is direct.</p>
+<p>Conventional Commits specifically — rather than a Strativ-invented format — was chosen because it is widely adopted, well-tooled (commitlint, semantic-release, changelog generation), and immediately recognisable to any developer joining from outside. Using a global standard means we are not asking new joiners to learn Strativ-specific conventions on day one.</p>
+<hr>
+<h2>4. Backwards Compatibility</h2>
+<p>Existing repositories are not retroactively rewritten. Commit history before the adoption date stays as it is — rewriting Git history to enforce a new standard would break references, links, and tooling for negligible benefit.</p>
+<p>From the adoption date forward:</p>
+<ul>
+<li>New commits in repositories under active development must follow §2.1.</li>
+<li>New PRs must use the §2.4 template (with deviation permitted for genuinely trivial changes).</li>
+<li>Repositories add a <code>CONTRIBUTING.md</code> (or extend their <code>CLAUDE.md</code>) listing their scope vocabulary.</li>
+<li>Archived or read-only repositories are exempt.</li>
+</ul>
+<p>Enforcement is initially advisory. After one quarter, repositories may opt in to commitlint or equivalent CI checks that reject non-conforming commits. Universal enforcement is a separate decision, taken after the team has lived with the standard.</p>
+<hr>
+<h2>5. Reference Implementation</h2>
+<h3>5.1 commitlint configuration</h3>
+<p>Repositories opting into automated enforcement should use commitlint with the conventional-commits preset. A reference configuration:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// commitlint.config.js</span><span class="w"></span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">extends</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;@commitlint/config-conventional&#39;</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;type-enum&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;always&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;feat&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fix&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;refactor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;perf&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;docs&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;build&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ci&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;chore&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">]],</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;subject-case&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;always&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lower-case&#39;</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;subject-max-length&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;always&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">72</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;body-max-line-length&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;always&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h3>5.2 PR template</h3>
+<p>Repositories add <code>.github/PULL_REQUEST_TEMPLATE.md</code> (or the equivalent for their host) containing the §2.4 structure as an empty form. The template is shown to PR authors automatically when they open a PR.</p>
+<h3>5.3 Reference repositories</h3>
+<p>Repositories that exemplify the standard well — and may be used as templates — include the Boo Energi backend (recent BMS-2xx work), the IMS maintenance branch, and the Strativ skill registry. New repositories may copy their <code>CONTRIBUTING.md</code> and PR template directly.</p>
+<hr>
+<h2>6. Open Issues</h2>
+<ul>
+<li>Should commitlint enforcement be opt-in indefinitely, or required after a transition window?</li>
+<li>How do we handle repositories shared with clients who have their own conventions? <em>(Provisional answer: client conventions win in client-owned repos; Strativ conventions apply in Strativ-owned repos.)</em></li>
+<li>Squash-merge vs. merge-commit policy is currently per-repository. Should it be standardised?</li>
+<li>How do we surface the scope vocabulary to a Copilot working in a repository without making it brittle?</li>
+<li>Co-authorship trailers when a Copilot drafted the commit — currently not required. Revisit if external tooling expects them.</li>
+</ul>
+<hr>
+<h2>Appendix A — The Strativ Brain Connection</h2>
+<p>Strativ Brain is the working name for our internal context engine — a system that indexes commits, PR descriptions, ADRs, internal documents, and code to answer questions across projects. It is consumed both by humans ("what was the last thing we did on auth?") and by AI tooling (Copilots that need cross-project context to give good answers).</p>
+<p>Brain is a retrieval and synthesis layer. It does not invent context that does not exist. Its outputs are bounded above by the quality of its inputs, and the inputs are largely Git artefacts.</p>
+<h3>A.1 What Brain can do with a good commit</h3>
+<p>Given a commit like:</p>
+<div class="codehilite"><pre><span></span><code>feat(auth): add JWT refresh token rotation
+
+Replaces single long-lived JWT with rotating refresh tokens.
+Refresh tokens are single-use; reuse triggers session
+revocation across all devices.
+
+Closes BMS-247.
+</code></pre></div>
+
+<p>Brain can correctly answer:</p>
+<ul>
+<li>"What changed in auth recently?" — surfaces this commit with a meaningful one-line summary.</li>
+<li>"Why did we add session revocation?" — points to this commit and the ticket.</li>
+<li>"Show me feature work on Boo Energi this month" — categorises this as a <code>feat</code> correctly.</li>
+<li>"Did we change how refresh tokens work?" — direct hit on the body text.</li>
+</ul>
+<h3>A.2 What Brain cannot do with a bad commit</h3>
+<p>Given the same change committed as <code>fix</code> with no body, Brain can answer none of the above usefully. The work is invisible to anyone who was not in the room when it shipped. Six months later, that includes the person who shipped it.</p>
+<h3>A.3 Practical implication</h3>
+<p>The unit of investment is small — sixty seconds of writing per commit, two minutes per PR — and the unit of return compounds across every future query. A repository's commit hygiene is the single largest predictor of how useful Brain is in that repository. This is not a theoretical correlation; it is what we observe today.</p>
+<p>Commits and PR descriptions are not just for the reviewer. <strong>They are the corpus. Treat them accordingly.</strong></p>
+      </div>
+<!-- /.entry-content -->
+
+    <div>
+    </div>
+
+    <footer class="text-orange">
+      <span class="text-orange">Category:</span> <a href="https://strativ-dev.github.io/engineering-at-strativ/category/engineering-process.html">Engineering Process</a>
+
+      <div>
+        Tags:
+        <button type="button" class="btn btn-default">
+          <a href="https://strativ-dev.github.io/engineering-at-strativ/tag/git.html">git</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="https://strativ-dev.github.io/engineering-at-strativ/tag/commits.html">commits</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="https://strativ-dev.github.io/engineering-at-strativ/tag/pull-requests.html">pull-requests</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="https://strativ-dev.github.io/engineering-at-strativ/tag/conventional-commits.html">conventional-commits</a>
+        </button>
+        <button type="button" class="btn btn-default">
+          <a href="https://strativ-dev.github.io/engineering-at-strativ/tag/engineering-process.html">engineering-process</a>
+        </button>
+    </div>
+    </footer>
+    <!-- /.post-info -->
+    </section>
+</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
