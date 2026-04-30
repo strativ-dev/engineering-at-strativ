@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Barlow', Garamond, serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2rem;
   background-color: #292832;
   color: #F7F7E8;
@@ -37,10 +37,10 @@ table:not(pre) tr:hover {
 blockquote {
   padding: 1em;
   margin: 1em 0;
-  color: #555;
-  background-color: #f9f9f9;
-  border-left: 5px solid #ccc;
-  font-style: italic; /* Added line for italics */
+  color: #E8E8D0;
+  background-color: #1e1d27;
+  border-left: 5px solid #FF5A00;
+  font-style: italic;
 }
 
 blockquote p:first-of-type {

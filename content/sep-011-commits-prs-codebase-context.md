@@ -4,7 +4,7 @@ Category: Engineering Process
 Slug: sep-011-commits-prs-codebase-context
 Authors: Saqibur Rahman
 Tags: git, commits, pull-requests, conventional-commits, engineering-process
-Summary: SEP-011 establishes a binding standard for commit messages, branch names, PR titles, and PR descriptions at Strativ — adopting Conventional Commits and explaining why Git artefact quality is a direct input to every system that depends on codebase context.
+Summary: SEP-011 establishes a binding standard for commit messages, branch names, PR titles, and PR descriptions at Strativ  -  adopting Conventional Commits and explaining why Git artefact quality is a direct input to every system that depends on codebase context.
 
 | Field | Value |
 |---|---|
@@ -14,7 +14,7 @@ Summary: SEP-011 establishes a binding standard for commit messages, branch name
 | **Status** | Draft |
 | **Type** | Process |
 | **Created** | 2026-04-30 |
-| **Target Adoption** | 2026-Q3 |
+| **Target Adoption** | 2026-Q2 |
 | **Requires** | SEP-001 |
 | **Related** | SEP-004, SEP-005, SEP-010 |
 
@@ -22,7 +22,7 @@ Summary: SEP-011 establishes a binding standard for commit messages, branch name
 
 ## Abstract
 
-This SEP establishes a binding standard for what Strativ developers write in Git — commit messages, branch names, pull request titles, and pull request descriptions. It adopts the Conventional Commits specification as the required commit format, defines the structure of useful PR descriptions, and explains why the quality of these artefacts is no longer just an engineering hygiene concern but a direct input to the systems — both human and AI — that depend on Strativ's accumulated codebase context.
+This SEP establishes a binding standard for what Strativ developers write in Git  -  commit messages, branch names, pull request titles, and pull request descriptions. It adopts the Conventional Commits specification as the required commit format, defines the structure of useful PR descriptions, and explains why the quality of these artefacts is no longer just an engineering hygiene concern but a direct input to the systems  -  both human and AI  -  that depend on Strativ's accumulated codebase context.
 
 It does not require AI assistance to be used. It does explicitly permit and encourage it for developers who find writing commit messages tedious, while making clear that the Pilot remains accountable for what gets written either way.
 
@@ -36,7 +36,7 @@ Every commit message and PR description Strativ produces becomes part of the his
 - A new joiner trying to understand why a piece of code looks the way it does.
 - A reviewer trying to compress "what changed and why" into thirty seconds of attention.
 - A client asking what was delivered in the last sprint.
-- **Strativ Brain** — our internal context engine — which indexes commit history, PR descriptions, and code together to answer questions across projects.
+- **Strativ Brain**  -  our internal context engine  -  which indexes commit history, PR descriptions, and code together to answer questions across projects.
 - Every AI Copilot that subsequently works in the repository, all of which have only what was written down to go on.
 
 The current state is uneven. We have repositories with thoughtful, structured histories that read like documentation. We also have repositories where half the commits say "fix" or "wip" or "updates," and PR descriptions that contain only the auto-generated branch name. This SEP exists because that gap is now expensive in ways it was not before.
@@ -50,11 +50,11 @@ Consider two commits, both touching the same authentication module:
 | `feat(auth): add JWT refresh token rotation` | `fix` |
 | Replaces single long-lived JWT with rotating refresh tokens. Refresh tokens are single-use; reuse triggers session revocation across all devices. Closes BMS-247. | *(no body)* |
 
-Both commits change the same number of lines. Both pass tests. Both ship. But only the first one survives contact with anyone who reads the repository later. The second is dead weight — present in history, useless for understanding it. A Copilot asked to summarise recent auth work in this repository can produce a coherent answer from the first commit and nothing useful from the second.
+Both commits change the same number of lines. Both pass tests. Both ship. But only the first one survives contact with anyone who reads the repository later. The second is dead weight  -  present in history, useless for understanding it. A Copilot asked to summarise recent auth work in this repository can produce a coherent answer from the first commit and nothing useful from the second.
 
 ### 1.2 The brain only knows what we write down
 
-Strativ Brain (and every other context system, internal or AI) is not a magic source of truth — it is a search and retrieval layer over what we, the developers, have already written. Its output quality is bounded by the quality of its input. "Garbage in, garbage out" is unusually literal here: a brain trained on a repository where 40% of commits say "fix" will cheerfully tell you that 40% of recent work involved fixing something, with no further detail available.
+Strativ Brain (and every other context system, internal or AI) is not a magic source of truth  -  it is a search and retrieval layer over what we, the developers, have already written. Its output quality is bounded by the quality of its input. "Garbage in, garbage out" is unusually literal here: a brain trained on a repository where 40% of commits say "fix" will cheerfully tell you that 40% of recent work involved fixing something, with no further detail available.
 
 This is not a problem we can solve later by improving the brain. It is a problem solved earlier, in the repository, by writing better commits and PR descriptions in the first place.
 
@@ -78,7 +78,7 @@ The structure is:
 
 #### 2.1.1 Required types
 
-Every commit must begin with one of the following types. The list is closed — "misc," "update," and similar are not types.
+Every commit must begin with one of the following types. The list is closed  -  "misc," "update," and similar are not types.
 
 | Type | Use for |
 |---|---|
@@ -87,14 +87,14 @@ Every commit must begin with one of the following types. The list is closed — 
 | `refactor` | Changes that neither add features nor fix bugs. Internal restructuring. |
 | `perf` | Changes that improve performance. State the measured improvement in the body. |
 | `test` | Adding or updating tests. No production code changes. |
-| `docs` | Documentation only — README, ADRs, code comments, runbooks. |
+| `docs` | Documentation only  -  README, ADRs, code comments, runbooks. |
 | `build` | Changes to build system, dependencies, packaging. |
 | `ci` | Changes to CI/CD pipelines, GitHub Actions, deployment scripts. |
 | `chore` | Maintenance tasks that don't fit the above. Use sparingly. |
 
 #### 2.1.2 Scope
 
-Scope is optional but strongly preferred. It names the area of the codebase being changed — typically a module, package, app, or domain. Each repository should document its scope vocabulary in its `CONTRIBUTING.md` or `CLAUDE.md`.
+Scope is optional but strongly preferred. It names the area of the codebase being changed  -  typically a module, package, app, or domain. Each repository should document its scope vocabulary in its `CONTRIBUTING.md` or `CLAUDE.md`.
 
 Common Strativ scope examples:
 
@@ -106,7 +106,7 @@ Common Strativ scope examples:
 
 The description follows the colon. It must:
 
-- Be written in the **imperative mood** — "add", not "added" or "adds". Read it as completing the sentence "If applied, this commit will…"
+- Be written in the **imperative mood**  -  "add", not "added" or "adds". Read it as completing the sentence "If applied, this commit will…"
 - Start with a lowercase letter.
 - Not end with a period.
 - Stay under 72 characters total (type + scope + colon + description).
@@ -139,7 +139,7 @@ Footers carry structured metadata that downstream tools can parse:
 Closes BMS-247
 Refs IMS-031, IMS-032
 Reviewed-by: Ludwig
-Co-authored-by: Tajmirul <tajmirul@strativ.se>
+Co-authored-by: Contributor <contributor@example.com>
 BREAKING CHANGE: token storage moved from cookie to header
 ```
 
@@ -170,7 +170,7 @@ Avoid PR titles that:
 
 ### 2.4 Pull request descriptions
 
-PR descriptions are the place where context that doesn't belong in commit messages goes — screenshots, deployment notes, testing instructions, reviewer guidance. Every PR uses the following template:
+PR descriptions are the place where context that doesn't belong in commit messages goes  -  screenshots, deployment notes, testing instructions, reviewer guidance. Every PR uses the following template:
 
 ```markdown
 ## What
@@ -236,7 +236,7 @@ A well-framed Copilot can read a diff and produce a competent first-draft commit
 - Knowing *why* a change was made when that reason isn't in the diff.
 - Choosing the right scope when scope vocabulary is project-specific.
 - Identifying breaking changes correctly when the breaking aspect is semantic, not structural.
-- Writing the Risks & Follow-up section honestly — that requires Pilot judgement about the surrounding system.
+- Writing the Risks & Follow-up section honestly  -  that requires Pilot judgement about the surrounding system.
 
 ---
 
@@ -244,19 +244,19 @@ A well-framed Copilot can read a diff and produce a competent first-draft commit
 
 Three reasons drive this SEP, in increasing order of weight.
 
-**First, reviewer experience.** A reviewer who can read a PR's What/Why/How block in thirty seconds and form an opinion is a reviewer who reviews promptly and reviews well. A reviewer who has to reverse-engineer the intent from the diff is slower, more error-prone, and — over time — more reluctant. The cost of a thirty-second write is recouped many times over in faster, sharper reviews.
+**First, reviewer experience.** A reviewer who can read a PR's What/Why/How block in thirty seconds and form an opinion is a reviewer who reviews promptly and reviews well. A reviewer who has to reverse-engineer the intent from the diff is slower, more error-prone, and  -  over time  -  more reluctant. The cost of a thirty-second write is recouped many times over in faster, sharper reviews.
 
-**Second, future-self experience.** Every developer eventually opens `git blame` on a line they wrote two years ago and wonders why. A commit that says "fix" is a small betrayal of the future self who will need to know. A commit that says `fix(consumption): correct off-by-one in monthly range split — caused first day of February to be excluded from billing` is a gift to that same person.
+**Second, future-self experience.** Every developer eventually opens `git blame` on a line they wrote two years ago and wonders why. A commit that says "fix" is a small betrayal of the future self who will need to know. A commit that says `fix(consumption): correct off-by-one in monthly range split  -  caused first day of February to be excluded from billing` is a gift to that same person.
 
-**Third — and this is the new weight in 2026 — context-engine readability.** Strativ Brain, AI Copilots, and any future tools that reason over our codebase are all consumers of what we write. They cannot improve quality on a corpus of "fix" commits. This is not a hypothetical concern; it is already shaping how useful (or not) our internal AI tooling is per repository. The repositories with disciplined commit hygiene are the repositories where Brain is genuinely useful. The correlation is direct.
+**Third  -  and this is the new weight in 2026  -  context-engine readability.** Strativ Brain, AI Copilots, and any future tools that reason over our codebase are all consumers of what we write. They cannot improve quality on a corpus of "fix" commits. This is not a hypothetical concern; it is already shaping how useful (or not) our internal AI tooling is per repository. The repositories with disciplined commit hygiene are the repositories where Brain is genuinely useful. The correlation is direct.
 
-Conventional Commits specifically — rather than a Strativ-invented format — was chosen because it is widely adopted, well-tooled (commitlint, semantic-release, changelog generation), and immediately recognisable to any developer joining from outside. Using a global standard means we are not asking new joiners to learn Strativ-specific conventions on day one.
+Conventional Commits specifically  -  rather than a Strativ-invented format  -  was chosen because it is widely adopted, well-tooled (commitlint, semantic-release, changelog generation), and immediately recognisable to any developer joining from outside. Using a global standard means we are not asking new joiners to learn Strativ-specific conventions on day one.
 
 ---
 
 ## 4. Backwards Compatibility
 
-Existing repositories are not retroactively rewritten. Commit history before the adoption date stays as it is — rewriting Git history to enforce a new standard would break references, links, and tooling for negligible benefit.
+Existing repositories are not retroactively rewritten. Commit history before the adoption date stays as it is  -  rewriting Git history to enforce a new standard would break references, links, and tooling for negligible benefit.
 
 From the adoption date forward:
 
@@ -297,7 +297,7 @@ Repositories add `.github/PULL_REQUEST_TEMPLATE.md` (or the equivalent for their
 
 ### 5.3 Reference repositories
 
-Repositories that exemplify the standard well — and may be used as templates — include the Boo Energi backend (recent BMS-2xx work), the IMS maintenance branch, and the Strativ skill registry. New repositories may copy their `CONTRIBUTING.md` and PR template directly.
+Repositories that exemplify the standard well  -  and may be used as templates  -  include the Boo Energi backend (recent BMS-2xx work), the IMS maintenance branch, and the Strativ skill registry. New repositories may copy their `CONTRIBUTING.md` and PR template directly.
 
 ---
 
@@ -307,13 +307,13 @@ Repositories that exemplify the standard well — and may be used as templates �
 - How do we handle repositories shared with clients who have their own conventions? *(Provisional answer: client conventions win in client-owned repos; Strativ conventions apply in Strativ-owned repos.)*
 - Squash-merge vs. merge-commit policy is currently per-repository. Should it be standardised?
 - How do we surface the scope vocabulary to a Copilot working in a repository without making it brittle?
-- Co-authorship trailers when a Copilot drafted the commit — currently not required. Revisit if external tooling expects them.
+- Co-authorship trailers when a Copilot drafted the commit  -  currently not required. Revisit if external tooling expects them.
 
 ---
 
-## Appendix A — The Strativ Brain Connection
+## Appendix A  -  The Strativ Brain Connection
 
-Strativ Brain is the working name for our internal context engine — a system that indexes commits, PR descriptions, ADRs, internal documents, and code to answer questions across projects. It is consumed both by humans ("what was the last thing we did on auth?") and by AI tooling (Copilots that need cross-project context to give good answers).
+Strativ Brain is the working name for our internal context engine  -  a system that indexes commits, PR descriptions, ADRs, internal documents, and code to answer questions across projects. It is consumed both by humans ("what was the last thing we did on auth?") and by AI tooling (Copilots that need cross-project context to give good answers).
 
 Brain is a retrieval and synthesis layer. It does not invent context that does not exist. Its outputs are bounded above by the quality of its inputs, and the inputs are largely Git artefacts.
 
@@ -333,10 +333,10 @@ Closes BMS-247.
 
 Brain can correctly answer:
 
-- "What changed in auth recently?" — surfaces this commit with a meaningful one-line summary.
-- "Why did we add session revocation?" — points to this commit and the ticket.
-- "Show me feature work on Boo Energi this month" — categorises this as a `feat` correctly.
-- "Did we change how refresh tokens work?" — direct hit on the body text.
+- "What changed in auth recently?"  -  surfaces this commit with a meaningful one-line summary.
+- "Why did we add session revocation?"  -  points to this commit and the ticket.
+- "Show me feature work on Boo Energi this month"  -  categorises this as a `feat` correctly.
+- "Did we change how refresh tokens work?"  -  direct hit on the body text.
 
 ### A.2 What Brain cannot do with a bad commit
 
@@ -344,6 +344,6 @@ Given the same change committed as `fix` with no body, Brain can answer none of 
 
 ### A.3 Practical implication
 
-The unit of investment is small — sixty seconds of writing per commit, two minutes per PR — and the unit of return compounds across every future query. A repository's commit hygiene is the single largest predictor of how useful Brain is in that repository. This is not a theoretical correlation; it is what we observe today.
+The unit of investment is small  -  sixty seconds of writing per commit, two minutes per PR  -  and the unit of return compounds across every future query. A repository's commit hygiene is the single largest predictor of how useful Brain is in that repository. This is not a theoretical correlation; it is what we observe today.
 
 Commits and PR descriptions are not just for the reviewer. **They are the corpus. Treat them accordingly.**
