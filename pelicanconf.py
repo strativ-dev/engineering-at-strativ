@@ -36,6 +36,7 @@ EXTRA_PATH_METADATA = {
     'extra/custom.css': {'path': 'custom.css'},
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/favicon.png': {'path': 'favicon.png'},
     'extra/CNAME': {'path': 'CNAME'},
     'extra/LICENSE': {'path': 'LICENSE'},
     'extra/README': {'path': 'README'},
